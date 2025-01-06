@@ -9,7 +9,6 @@ describe('App routing', () => {
         <App />
       </MemoryRouter>
     );
-    // Vérifie que le texte attendu sur la page d'accueil est présent
     expect(screen.getByRole('heading', { name: /Bienvenue sur le Blog/i })).toBeInTheDocument();
     expect(screen.getByText(/Voici la page d'accueil./i)).toBeInTheDocument();
   });
@@ -20,9 +19,10 @@ describe('App routing', () => {
         <App />
       </MemoryRouter>
     );
-    // Vérifie que le texte attendu sur la page des articles est présent
+    // Vérifie le titre principal de la page des articles
     expect(screen.getByRole('heading', { name: /Tous les Articles/i })).toBeInTheDocument();
-    expect(screen.getByText(/Liste des articles./i)).toBeInTheDocument();
+    // Vérifie la sous-section "Liste des Articles"
+    expect(screen.getByRole('heading', { name: /Liste des Articles/i })).toBeInTheDocument();
   });
 
   test('renders not found page for an unknown route', () => {
@@ -31,7 +31,6 @@ describe('App routing', () => {
         <App />
       </MemoryRouter>
     );
-    // Vérifie que la page 404 s'affiche pour une route inconnue
     expect(screen.getByRole('heading', { name: /404/i })).toBeInTheDocument();
     expect(screen.getByText(/Page non trouvée./i)).toBeInTheDocument();
   });
