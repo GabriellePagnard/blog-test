@@ -1,5 +1,11 @@
+/* Directives Tailwind */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Styles personnalisés */
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: 'Inter', system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
@@ -25,14 +31,18 @@ a:hover {
 body {
   margin: 0;
   display: flex;
-  place-items: center;
+  flex-direction: column; /* Assure une mise en page en colonne */
+  align-items: center; /* Centre les éléments horizontalement */
+  justify-content: center; /* Centre les éléments verticalement */
   min-width: 320px;
   min-height: 100vh;
+  background-color: #242424; /* Couleur de fond par défaut */
 }
 
 h1 {
   font-size: 3.2em;
   line-height: 1.1;
+  color: #ffffff; /* Couleur par défaut pour le texte */
 }
 
 button {
@@ -43,11 +53,13 @@ button {
   font-weight: 500;
   font-family: inherit;
   background-color: #1a1a1a;
+  color: #ffffff; /* Couleur du texte */
   cursor: pointer;
-  transition: border-color 0.25s;
+  transition: all 0.25s ease;
 }
 button:hover {
   border-color: #646cff;
+  background-color: #333333; /* Changement de couleur au hover */
 }
 button:focus,
 button:focus-visible {
@@ -64,5 +76,6 @@ button:focus-visible {
   }
   button {
     background-color: #f9f9f9;
+    color: #000000; /* Texte noir en mode clair */
   }
 }
