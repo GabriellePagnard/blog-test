@@ -1,6 +1,6 @@
 const HomePage = () => {
   return (
-    <div className="flex flex-col items-center min-h-screen bg-gradient-to-r from-blue-500 via-indigo-600 to-purple-700 text-white px-6">
+    <div className="flex flex-col items-center min-h-screen bg-gradient-to-r from-blue-500 via-indigo-600 to-purple-700 text-white px-6 pt-20">
       {/* Container principal avec espacement vertical entre les sections */}
       <div className="flex flex-col items-center w-full space-y-16 mt-24">
         
@@ -14,6 +14,7 @@ const HomePage = () => {
           </p>
           <a
             href="/articles"
+            aria-label="Explorer les articles"
             className="mt-6 inline-block px-8 py-3 bg-pink-500 hover:bg-pink-600 text-white font-medium text-lg rounded-full shadow-lg transform hover:scale-105 transition duration-300 ease-in-out"
           >
             Explorer les Articles
@@ -45,10 +46,13 @@ const HomePage = () => {
               <input
                 type="email"
                 placeholder="Entrez votre email"
+                required
+                aria-label="Champ pour entrer votre adresse email"
                 className="flex-1 px-4 py-2 rounded-lg bg-gray-800 text-white focus:outline-none focus:ring-2 focus:ring-pink-400"
               />
               <button
                 type="submit"
+                aria-label="Bouton pour s'inscrire à la newsletter"
                 className="px-6 py-2 bg-pink-500 hover:bg-pink-600 text-white font-medium rounded-lg shadow-md transition-all"
               >
                 S'inscrire
