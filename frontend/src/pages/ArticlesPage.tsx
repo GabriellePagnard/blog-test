@@ -1,23 +1,16 @@
 const ArticlesPage = () => {
   const articles = [
-    { id: 1, title: 'Article 1', summary: 'Résumé de l\'article 1' },
-    { id: 2, title: 'Article 2', summary: 'Résumé de l\'article 2' },
-    { id: 3, title: 'Article 3', summary: 'Résumé de l\'article 3' },
+    { id: 1, title: "Article 1", summary: "Résumé de l'article 1" },
+    { id: 2, title: "Article 2", summary: "Résumé de l'article 2" },
+    { id: 3, title: "Article 3", summary: "Résumé de l'article 3" },
   ];
 
   return (
     <div className="flex flex-col items-center min-h-screen bg-gradient-to-r from-indigo-600 via-purple-500 to-pink-500 text-white px-6 py-8 pt-20">
-      {/* Header */}
       <header className="text-center mb-12 mt-4">
-        <h1 className="text-4xl font-extrabold tracking-tight mb-4">
-          Tous les Articles
-        </h1>
-        <p className="text-lg">
-          Découvrez nos derniers articles, idées et réflexions.
-        </p>
+        <h1 className="text-4xl font-extrabold tracking-tight mb-4">Tous les Articles</h1>
+        <p className="text-lg">Découvrez nos derniers articles, idées et réflexions.</p>
       </header>
-
-      {/* Articles Section */}
       <main className="w-full max-w-4xl space-y-6">
         {articles.map((article) => (
           <article
